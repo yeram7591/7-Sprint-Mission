@@ -1,0 +1,154 @@
+:root {
+  --section01-bg-color : #cfe5ff;
+  --footer-bg-color : #111827;
+  --header-btn-bgcolor : #3691ff;
+  --white : #ffffff;
+  --section2-span-color :#338af3;
+
+}
+
+* {
+  box-sizing:border-box;
+  margin: 0;
+}
+
+html {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.gnb,
+.gnb-logo {
+  display: flex;
+  align-items: center;
+}
+
+.gnb {
+  justify-content: space-between;
+  height: 70px;
+}
+
+.gnb-logo,
+.gnb-login {
+  margin:0px 200px;
+}
+
+.gnb-login {
+  text-decoration: none;
+  color:var(--white);
+  background-color: var(--header-btn-bgcolor);
+  border-radius: 8px;
+  padding:10px 30px;
+  cursor: pointer;
+}
+
+.gnb-logo img {
+  margin-right: 10px;
+}
+
+.section01 {
+  height: 420px;
+  background-color: var(--section01-bg-color);
+  background-repeat: no-repeat;
+  background-size:50%;
+  background-position: right 20% bottom;
+  display: flex;
+  justify-content:left;
+  align-items: center;
+}
+
+.image-top {
+  background-image: url("images/img_home_top.png");
+}
+
+.image-bottom {
+  background-image: url("images/img_home_bottom.png");
+}
+
+.visual-text {
+  margin-left: 200px;
+}
+
+.visual-text h1 {
+  font-size: 30px;
+  line-height: 45px;
+  margin-bottom: 20px;
+}
+
+.visual-text a {
+  text-decoration: none;
+  color:var(--white);
+  background-color: var(--header-btn-bgcolor);
+  border-radius: 9999px;
+  padding:8px 100px;
+  display: inline-block;
+}
+
+.wrapper {
+  margin: 0px 200px;
+}
+
+.section02 {
+  padding:100px 0px;
+}
+
+.section02-content--reverse {
+  justify-content: end;
+  flex-direction: row-reverse;
+  text-align: end;
+}
+
+.section02-content {
+  display: flex;
+  align-items: center;
+  gap:40px;
+}
+
+.section02-img {
+  width: 588px;
+  height: 444px;
+}
+
+.section02-text span {
+  display: block;
+}
+
+.section02-text span:first-child {
+  color: var(--section2-span-color)
+}
+
+.section02-title {
+  font-size: 30px;
+  margin:15px 0px;
+  line-height: 45px;
+}
+
+.search {
+  justify-content: end;
+}
+
+footer {
+  height: 100px;
+  background-color: var(--footer-bg-color);
+  color:var(--white);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+}
+
+.footer-content span {
+  opacity: 0.5;
+  margin-right: 30px;
+  flex-shrink: 2;
+}
+
+.privacy-faq a {
+  color: var(--white);
+  text-decoration:none;
+}
+
+.privacy-faq a span {
+  opacity: 0.9;
+}
