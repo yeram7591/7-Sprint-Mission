@@ -10,7 +10,6 @@
   --footer-text01 : #9CA3AF;
   --footer-text02 : #E5E7EB;
   --white : #ffffff;
-
 }
 
 * {
@@ -18,8 +17,12 @@
   margin: 0;
 }
 
-html {
+body {
   font-family: 'Pretendard', sans-serif;
+  }
+
+.gnb {
+  margin:0px 200px;
 }
 
 .gnb,
@@ -33,20 +36,14 @@ html {
   height: 70px;
 }
 
-.gnb-logo,
-.gnb-login {
-  margin:0px 200px;
-  flex-shrink: 0;
-}
-
 .gnb-login {
   text-decoration: none;
   color:var(--white);
   background-color: var(--header-btn-bgcolor);
   border-radius: 8px;
   padding:12px 20px;
-  cursor: pointer;
   font-weight: 600;
+  flex-shrink: 0;
 }
 
 .gnb-login:hover {
@@ -77,7 +74,9 @@ html {
 }
 
 .visual-text {
-  margin-left: 200px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .visual-text h1 {
@@ -105,7 +104,9 @@ html {
 }
 
 .wrapper {
-  margin: 0px 200px;
+  width: 100%;
+  max-width: 1200px;
+  margin:0 auto;
 }
 
 .section02 {
@@ -125,8 +126,8 @@ html {
 }
 
 .section02-img {
-  width: 588px;
-  height: 444px;
+  width: 50%;
+  height: 50%;
 }
 
 .section02-text span {
@@ -179,6 +180,10 @@ footer {
   color: var(--footer-text02);
   text-decoration:none;
   margin-right: 30px;
+}
+
+.footer-icons {
+  flex-shrink: 0;
 }
 
 .footer-icons a {
