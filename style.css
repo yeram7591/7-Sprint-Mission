@@ -3,9 +3,11 @@
   --footer-bg-color : #111827;
   --header-btn-bgcolor : #3692ff;
   --header-btn-bgcolor--hover :#1251AA;
-  --header-h1-color: #374151;
+  --section01-h1-color: #374151;
+  --section02-span-color :#3692ff;
+  --section02-p-color : #374151;
+  --section02-title-color : #374151;
   --white : #ffffff;
-  --section2-span-color :#338af3;
 
 }
 
@@ -81,7 +83,7 @@ html {
   line-height: 56px;
   margin-bottom: 32px;
   font-weight: 700;
-  color:var(--header-h1-color);
+  color:var(--section01-h1-color);
 }
 
 .visual-text a {
@@ -126,17 +128,25 @@ html {
 }
 
 .section02-text span {
-  display: block;
-}
-
-.section02-text span:first-child {
-  color: var(--section2-span-color)
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25.2px;
+  color: var(--section02-span-color)
 }
 
 .section02-title {
-  font-size: 30px;
-  margin:15px 0px;
-  line-height: 45px;
+  font-size: 40px;
+  margin:12px 0px 24px;
+  line-height: 56px;
+  font-weight: 700;
+  color:var(--section02-title-color)
+}
+
+.section02-text p {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28.8px;
+  color:var(--section02-p-color)
 }
 
 .search {
