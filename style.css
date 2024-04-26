@@ -1,7 +1,9 @@
 :root {
   --section01-bg-color : #cfe5ff;
   --footer-bg-color : #111827;
-  --header-btn-bgcolor : #3691ff;
+  --header-btn-bgcolor : #3692ff;
+  --header-btn-bgcolor--hover :#1251AA;
+  --header-h1-color: #374151;
   --white : #ffffff;
   --section2-span-color :#338af3;
 
@@ -13,7 +15,7 @@
 }
 
 html {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Pretendard', sans-serif;
 }
 
 .gnb,
@@ -30,6 +32,7 @@ html {
 .gnb-logo,
 .gnb-login {
   margin:0px 200px;
+  flex-shrink: 0;
 }
 
 .gnb-login {
@@ -37,19 +40,24 @@ html {
   color:var(--white);
   background-color: var(--header-btn-bgcolor);
   border-radius: 8px;
-  padding:10px 30px;
+  padding:12px 20px;
   cursor: pointer;
+  font-weight: 600;
 }
+
+.gnb-login:hover {
+    background-color: var(--header-btn-bgcolor--hover)
+  }
 
 .gnb-logo img {
   margin-right: 10px;
 }
 
 .section01 {
-  height: 420px;
+  height: 540px;
   background-color: var(--section01-bg-color);
   background-repeat: no-repeat;
-  background-size:50%;
+  background-size:55%;
   background-position: right 20% bottom;
   display: flex;
   justify-content:left;
@@ -69,9 +77,11 @@ html {
 }
 
 .visual-text h1 {
-  font-size: 30px;
-  line-height: 45px;
-  margin-bottom: 20px;
+  font-size: 40px;
+  line-height: 56px;
+  margin-bottom: 32px;
+  font-weight: 700;
+  color:var(--header-h1-color);
 }
 
 .visual-text a {
@@ -79,8 +89,15 @@ html {
   color:var(--white);
   background-color: var(--header-btn-bgcolor);
   border-radius: 9999px;
-  padding:8px 100px;
+  padding:16px 124px;
   display: inline-block;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.visual-text a:hover {
+  background-color: var(--header-btn-bgcolor--hover)
 }
 
 .wrapper {
@@ -135,7 +152,7 @@ footer {
 .footer-content {
   display: flex;
   justify-content: space-around;
-  padding-top: 10px;
+  padding-top: 20px;
 }
 
 .footer-content span {
