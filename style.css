@@ -1,12 +1,14 @@
 :root {
-  --section01-bg-color : #cfe5ff;
-  --footer-bg-color : #111827;
   --header-btn-bgcolor : #3692ff;
   --header-btn-bgcolor--hover :#1251AA;
+  --section01-bg-color : #cfe5ff;
   --section01-h1-color: #374151;
   --section02-span-color :#3692ff;
   --section02-p-color : #374151;
   --section02-title-color : #374151;
+  --footer-bg-color : #111827;
+  --footer-text01 : #9CA3AF;
+  --footer-text02 : #E5E7EB;
   --white : #ffffff;
 
 }
@@ -154,28 +156,31 @@ html {
 }
 
 footer {
-  height: 100px;
+  height: 160px;
   background-color: var(--footer-bg-color);
   color:var(--white);
+  padding:32px 200px;
 }
 
 .footer-content {
   display: flex;
-  justify-content: space-around;
-  padding-top: 20px;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.09px;
 }
 
-.footer-content span {
-  opacity: 0.5;
+.footer-content > span {
+  color:var(--footer-text01);
   margin-right: 30px;
-  flex-shrink: 2;
 }
 
 .privacy-faq a {
-  color: var(--white);
+  color: var(--footer-text02);
   text-decoration:none;
+  margin-right: 30px;
 }
 
-.privacy-faq a span {
-  opacity: 0.9;
+.footer-icons a {
+  margin-right: 13px;
 }
