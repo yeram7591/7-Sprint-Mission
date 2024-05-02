@@ -1,0 +1,18 @@
+:root {
+  --header-btn-bgcolor : #3692ff;
+  --header-btn-bgcolor--hover :#1251AA;
+  --banner-bg-color : #cfe5ff;
+  --banner-h2-color: #374151;
+  --section-span-color :#3692ff;
+  --section-p-color : #374151;
+  --section-title-color : #374151;
+  --footer-bg-color : #111827;
+  --footer-text01 : #9CA3AF;
+  --footer-text02 : #E5E7EB;
+  --white : #ffffff;
+}
+
+* {
+  box-sizing:border-box;
+  margin: 0;
+}
