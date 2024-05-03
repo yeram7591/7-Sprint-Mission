@@ -1,9 +1,10 @@
-body {
-  font-family: 'Pretendard', sans-serif;
-}
-
 .gnb {
-  margin:0px 200px;
+  padding:0px 200px;
+  position: fixed;
+  top:0;
+  right: 0;
+  left:0;
+  background-color: white;
 }
 
 .gnb,
@@ -48,6 +49,7 @@ body {
 
 .image-top {
   background-image:url("images/Img_home_top.png");
+  margin-top: 70px;
 }
 
 .image-bottom {
