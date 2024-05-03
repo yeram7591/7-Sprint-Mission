@@ -21,12 +21,12 @@
   height: 430px;
 }
 
-.login-wrap label {
+.signup-wrap label {
   font: 700 18px/21.48px 'Pretendard';
   color:var(--Cool-Gray-800);
 }
 
-.login-wrap .input-text {
+.signup-wrap .input-text {
   display: block;
   margin:16px 0px 24px;
   padding:16px 24px;
@@ -39,7 +39,7 @@
   color:var(--Cool-Gray-400)
 }
 
-.login-wrap .input-text:focus {
+.signup-wrap .input-text:focus {
   outline: 2px solid var(--Bright-Blue);
 }
 
@@ -47,13 +47,13 @@
   position: relative;
 }
 
-.login-wrap .visible-toggle {
+.signup-wrap .visible-toggle {
   position: absolute;
   right: 25px;
   top: 19px;
 }
 
-.login-wrap .btn {
+.signup-wrap .btn {
   display: block;
   height: 56px;
   border-radius: 40px;
@@ -66,7 +66,7 @@
   text-decoration: none;
 }
 
-.login-wrap .btn:hover {
+.signup-wrap .btn:hover {
   background-color: var(--Bright-Blue);
 }
 
@@ -90,15 +90,15 @@
   margin-left: 10px;
 }
 
-.login-bottom {
+.signup-bottom {
   text-align: center;
   font: 600 15px/17.9px 'Pretendard'
 }
 
-.login-bottom-text {
+.signup-bottom-text {
   color: var(--Cool-Gray-800);
 }
 
-.login-bottom-link {
+.signup-bottom-link {
   color: var(--Sky-Blue);
 }
