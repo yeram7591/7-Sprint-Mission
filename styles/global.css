@@ -1,0 +1,23 @@
+:root {
+  --Cobalt: #1251aa;
+  --Pattens-Blue: #cfe5ff;
+  --Black-Russian: #111827;
+  --Solitude: #e5e7eb;
+  --Cloud-Burst: #374151;
+  --white: #ffffff;
+  --Cool-Gray-800: #1f2937;
+  --Cool-Gray-100: #f3f4f6;
+  --Cool-Gray-400: #9ca3af;
+  --Alice-Blue: #e6f2ff;
+  --Sky-Blue: #3182f6;
+  --Bright-Blue: #3692ff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: 'Pretendard', sans-serif;
+}

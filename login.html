@@ -1,51 +1,74 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="login.css">
-  <link rel="stylesheet" href="global.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/auth.css" />
+  </head>
+  <body>
+    <div class="flex-center">
+      <header>
+        <div class="header-inner">
+          <a class="logo" href="index.html"
+            ><img src="images/panda-logo.svg" alt="판다 얼굴 로고" /><img
+              src="images/logo.svg"
+              alt="판다 마켓 로고"
+          /></a>
+        </div>
+      </header>
 
-  <div class="wrap">
-
-    <header>
-      <div class="header-inner">
-        <img src="images/panda-logo.svg" alt="판다 얼굴 로고">
-        <a class="logo" href="index.html"><img src="images/logo.svg" alt="판다 마켓 로고"></a>
-      </div>
-    </header>
-  
-    <div class="container content">     
-      <form>
-        <div class="login-wrap">
-          <label for="email">이메일</label>
-          <input class="input-text" id="email" name="email" type="email" placeholder="이메일을 입력해주세요">
-          <label for="password">비밀번호</label>
-          <div class="input-password">
-            <input class="input-text" id="password" name="password" type="password" placeholder="비밀번호를 입력해주세요">
-            <img class="visible-toggle" src="images/visible.svg" alt="비밀번호 가시성 토글">
-          </div>
-          <a class="btn" href="/login.html">로그인</a>
-          <div class="login-social">
-            <span class="login-social-text">간편 로그인하기</span>
-            <div class="login-social-logo">
-              <a href="https://www.google.com"><img src="images/google-logo.svg" alt="구글 간편 로그인 로고"></a>
-              <a href="https://www.kakaocorp.com/page"><img src="images/kakao-logo.svg" alt="카카오 간편 로그인 로고"></a>
+      <div class="container content">
+        <form>
+          <div class="auth-wrap">
+            <label for="email">이메일</label>
+            <input
+              class="input-text"
+              id="email"
+              name="email"
+              type="email"
+              placeholder="이메일을 입력해주세요"
+            />
+            <label for="password">비밀번호</label>
+            <div class="input-password">
+              <input
+                class="input-text"
+                id="password"
+                name="password"
+                type="password"
+                placeholder="비밀번호를 입력해주세요"
+              />
+              <img
+                class="visible-toggle"
+                src="images/visible.svg"
+                alt="비밀번호 가시성 토글"
+              />
+            </div>
+            <a class="auth-btn" href="/login.html">로그인</a>
+            <div class="login-social">
+              <span class="login-social-text">간편 로그인하기</span>
+              <div class="login-social-logo">
+                <a href="https://www.google.com"
+                  ><img
+                    src="images/google-logo.svg"
+                    alt="구글 간편 로그인 로고"
+                /></a>
+                <a href="https://www.kakaocorp.com/page"
+                  ><img
+                    src="images/kakao-logo.svg"
+                    alt="카카오 간편 로그인 로고"
+                /></a>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="login-bottom">
-          <span class="login-bottom-text">판다마켓이 처음이신가요?</span>
-          <a class="login-bottom-link" href="/signup.html">회원가입</a>
-        </div>
-      </form>
+          <div class="auth-bottom">
+            <span class="auth-bottom-text">판다마켓이 처음이신가요?</span>
+            <a class="auth-bottom-link" href="/signup.html">회원가입</a>
+          </div>
+        </form>
+      </div>
     </div>
-    
-  </div>
-
-</body>
+  </body>
 </html>
