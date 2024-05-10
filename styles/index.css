@@ -1,18 +1,21 @@
-.gnb {
-  padding: 0px 200px;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  background-color: white;
-  justify-content: space-between;
+header {
   height: 70px;
+  position: sticky;
+  top: 0;
+  display: flex;
 }
 
 .gnb,
 .gnb-logo {
   display: flex;
   align-items: center;
+}
+
+.gnb {
+  width: 100%;
+  padding: 0px 200px;
+  background-color: white;
+  justify-content: space-between;
 }
 
 .gnb-logo {
@@ -50,7 +53,6 @@
 
 .image-top {
   background-image: url('../images/banner-top.png');
-  margin-top: 70px;
 }
 
 .image-bottom {
@@ -160,4 +162,13 @@ footer {
 
 .footer-icons a {
   margin-right: 13px;
+}
+
+@media (max-width: 768px) {
+  .gnb {
+    padding: 0px 24px;
+  }
+
+  .header {
+  }
 }
