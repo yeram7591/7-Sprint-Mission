@@ -71,7 +71,7 @@ header {
   color: var(--Cloud-Burst);
 }
 
-.banner-text a {
+.banner .item-btn {
   text-decoration: none;
   color: var(--white);
   background-color: var(--Bright-Blue);
@@ -81,7 +81,7 @@ header {
   font: 600 20px / 24px Pretendard;
 }
 
-.banner-text a:hover {
+.banner .item-btn:hover {
   background-color: var(--Cobalt);
 }
 
@@ -164,11 +164,125 @@ footer {
   margin-right: 13px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .gnb {
     padding: 0px 24px;
   }
 
-  .header {
+  .banner {
+    background-size: 135%;
+    background-position: center bottom;
+    align-items: flex-start;
+    text-align: center;
+  }
+
+  .banner.image-top {
+    height: 900px;
+    padding: 84px 0px;
+  }
+
+  .banner.image-bottom {
+    height: 710px;
+    padding: 150px 0px;
+    margin-top: 50px;
+  }
+
+  h2 br {
+    display: none;
+  }
+
+  .image-bottom br {
+    display: inline;
+  }
+
+  .section {
+    padding: 24px;
+  }
+
+  .section-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section-img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .section-text {
+    width: 100%;
+  }
+
+  .section-content span {
+    font-size: 18px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .section-content p {
+    font-size: 18px;
+  }
+
+  footer {
+    padding: 32px 50px;
+  }
+
+  .copyright,
+  .privacy-faq {
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .gnb {
+    padding: 0px 16px;
+  }
+
+  .panda-logo {
+    display: none;
+  }
+
+  .banner.image-top {
+    height: 700px;
+    padding: 60px 0px;
+    background-size: 170%;
+    background-position: center bottom;
+  }
+
+  .banner-text h2 {
+    font-size: 32px;
+    padding: 0 40px;
+    line-height: 44.8px;
+  }
+
+  .banner .item-btn {
+    width: 154px;
+    height: 55px;
+    font-size: 16px;
+    padding: 14px 20px;
+  }
+
+  .section-content span {
+    font-size: 16px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .section-content p {
+    font-size: 16px;
+  }
+
+  footer {
+    position: relative;
+  }
+
+  .copyright {
+    position: absolute;
+    bottom: 32px;
+    left: 50px;
   }
 }
