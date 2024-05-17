@@ -24,20 +24,23 @@
           <div class="auth-wrap">
             <label for="email">이메일</label>
             <input
-              class="input-text"
+              class="input-text input-email"
               id="email"
               name="email"
               type="email"
               placeholder="이메일을 입력해주세요"
+              required
             />
-            <label for="password">비밀번호</label>
+            <label class="label-password" for="password">비밀번호</label>
             <div class="input-password">
               <input
-                class="input-text"
+                class="input-text input-password"
                 id="password"
                 name="password"
                 type="password"
                 placeholder="비밀번호를 입력해주세요"
+                minlength="8"
+                required
               />
               <img
                 class="visible-toggle"
@@ -45,7 +48,7 @@
                 alt="비밀번호 가시성 토글"
               />
             </div>
-            <a class="auth-btn" href="/login.html">로그인</a>
+            <a class="auth-btn" href="/items.html">로그인</a>
             <div class="login-social">
               <span class="login-social-text">간편 로그인하기</span>
               <div class="login-social-logo">
@@ -70,5 +73,6 @@
         </form>
       </div>
     </div>
+    <script src="login.js"></script>
   </body>
 </html>

@@ -73,6 +73,10 @@
   background-color: var(--Bright-Blue);
 }
 
+.auth-wrap .auth-btn--disabled {
+  display: none;
+}
+
 .login-social {
   height: 74px;
   border-radius: 8px;
@@ -104,6 +108,18 @@
 
 .auth-bottom-link {
   color: var(--Sky-Blue);
+}
+
+.error-input {
+  font: 600 15px / 17.9px Pretendard;
+  color: var(--Sunset-Orange);
+  margin: 8px 16px 24px;
+  margin: 16px 0px 8px;
+  display: block;
+}
+
+.error-outline {
+  outline: var(--Sunset-Orange) solid 2px;
 }
 
 @media (max-width: 768px) {
