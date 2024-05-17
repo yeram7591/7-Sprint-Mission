@@ -74,7 +74,7 @@
 }
 
 .auth-wrap .auth-btn--disabled {
-  display: none;
+  pointer-events: none;
 }
 
 .login-social {
