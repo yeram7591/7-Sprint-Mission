@@ -1,8 +1,8 @@
-const email = document.querySelector('.input-email');
-const password = document.querySelector('input.input-password');
-const label = document.querySelector('.label-password');
-const authBtn = document.querySelector('.auth-btn');
 const pattern = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-za-z0-9\-]+/;
+const email = document.querySelector('.input-email');
+const password = document.querySelector('.input-password');
+const authBtn = document.querySelector('.auth-btn');
+const togglePwdImg = document.querySelector('.pwd-toggle');
 
 function validate() {
   if (
@@ -20,13 +20,12 @@ function showError(errMsg, errElement) {
   errInput.className = 'error-input';
   errInput.innerText = errMsg;
   errElement.insertAdjacentElement('afterend', errInput);
+  return errInput;
 }
 
 function cleanError(errElement) {
-  if (errElement.nextElementSibling !== label) {
-    errElement.classList.remove('error-outline');
-    errElement.nextElementSibling.remove();
-  }
+  errElement.classList.remove('error-outline');
+  errElement.nextElementSibling.remove();
 }
 
 function btnDisabled() {
@@ -69,14 +68,24 @@ function checkPassword() {
   }
 }
 
+function togglePwd() {
+  if (password.type === 'password') {
+    password.type = 'text';
+    togglePwdImg.src = 'images/visible.svg';
+  } else {
+    password.type = 'password';
+    togglePwdImg.src = 'images/non-visible.svg';
+  }
+}
+
+togglePwdImg.addEventListener('click', togglePwd);
+
+email.addEventListener('focusout', checkEmail);
 email.addEventListener('focusin', () => {
   cleanError(email);
 });
 
-email.addEventListener('focusout', checkEmail);
-
+password.addEventListener('focusout', checkPassword);
 password.addEventListener('focusin', () => {
   cleanError(password);
 });
-
-password.addEventListener('focusout', checkPassword);

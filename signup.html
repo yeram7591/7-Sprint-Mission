@@ -24,7 +24,7 @@
           <div class="auth-wrap">
             <label for="email">이메일</label>
             <input
-              class="input-text"
+              class="input-text input-email"
               id="email"
               name="email"
               type="email"
@@ -32,43 +32,43 @@
             />
             <label for="nickname">닉네임</label>
             <input
-              class="input-text"
+              class="input-text input-nickname"
               id="nickname"
               name="nickname"
               type="text"
               placeholder="닉네임을 입력해주세요"
             />
             <label for="password">비밀번호</label>
-            <div class="input-password">
+            <div class="input-password-box">
               <input
-                class="input-text"
+                class="input-text input-password"
                 id="password"
                 name="password"
                 type="password"
                 placeholder="비밀번호를 입력해주세요"
               />
               <img
-                class="visible-toggle"
-                src="images/visible.svg"
+                class="pwd-toggle"
+                src="images/non-visible.svg"
                 alt="비밀번호 가시성 토글"
               />
             </div>
             <label for="password-check">비밀번호 확인</label>
-            <div class="input-password input-password-check">
+            <div class="input-password-box">
               <input
-                class="input-text"
-                id="password-check"
-                name="password-check"
+                class="input-text input-password-confirm"
+                id="password-confirm"
+                name="password-confirm"
                 type="password"
                 placeholder="비밀번호를 다시 한 번 입력해주세요"
               />
               <img
-                class="visible-toggle"
-                src="images/visible.svg"
+                class="pwd-toggle pwd-toggle2"
+                src="images/non-visible.svg"
                 alt="비밀번호 가시성 토글"
               />
             </div>
-            <a class="auth-btn" href="/signup.html">회원가입</a>
+            <a class="auth-btn" href="/signin.html">회원가입</a>
             <div class="login-social">
               <span class="login-social-text">간편 로그인하기</span>
               <div class="login-social-logo">
@@ -93,5 +93,6 @@
         </form>
       </div>
     </div>
+    <script type="module" src="./js/signup.js"></script>
   </body>
 </html>

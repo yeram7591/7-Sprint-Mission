@@ -46,11 +46,11 @@
   outline: 2px solid var(--Bright-Blue);
 }
 
-.input-password {
+.input-password-box {
   position: relative;
 }
 
-.auth-wrap .visible-toggle {
+.auth-wrap .pwd-toggle {
   position: absolute;
   right: 25px;
   top: 19px;
