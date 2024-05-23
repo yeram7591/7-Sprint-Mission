@@ -5,27 +5,33 @@ const authBtn = document.querySelector('.auth-btn');
 const togglePwdImg = document.querySelector('.pwd-toggle');
 
 function validate() {
-  if (
-    email.value &&
-    pattern.test(email.value) &&
-    password.value &&
-    password.value.length >= 8
-  )
-    return true;
+  return (
+    (pattern.test(email.value) && password.value.length >= 8) ||
+    (!pattern.test(email.value) &&
+      password.value.length >= 8 &&
+      !nickname.value &&
+      confirmPassword.value === password.value)
+  );
 }
 
-function showError(errMsg, errElement) {
-  errElement.classList.add('error-outline');
-  const errInput = document.createElement('strong');
-  errInput.className = 'error-input';
-  errInput.innerText = errMsg;
-  errElement.insertAdjacentElement('afterend', errInput);
-  return errInput;
+function showError(errMsg, element) {
+  if (!element.nextElementSibling.classList.contains('error-input')) {
+    const errInput = document.createElement('strong');
+    errInput.className = 'error-input';
+    errInput.innerText = errMsg;
+    element.insertAdjacentElement('afterend', errInput);
+    element.classList.add('error-outline');
+  }
 }
 
-function cleanError(errElement) {
-  errElement.classList.remove('error-outline');
-  errElement.nextElementSibling.remove();
+function cleanError(event) {
+  const element = event.target;
+  if (element.classList.contains('error-outline')) {
+    element.classList.remove('error-outline');
+    if (element.nextElementSibling.classList.contains('error-input')) {
+      element.nextElementSibling.remove();
+    }
+  }
 }
 
 function btnDisabled() {
@@ -36,56 +42,72 @@ function btnActive() {
   authBtn.classList.remove('auth-btn--disabled');
 }
 
-function checkEmail() {
-  const errMsg1 = '이메일을 입력해주세요';
-  const errMsg2 = '잘못된 이메일 형식입니다';
+function checkEmail(event) {
+  const email = event.target;
   if (!email.value) {
-    showError(errMsg1, email);
+    const errMsg = '이메일을 입력해주세요';
+    showError(errMsg, email);
     btnDisabled();
   } else if (!pattern.test(email.value)) {
-    showError(errMsg2, email);
+    const errMsg = '잘못된 이메일 형식입니다';
+    showError(errMsg, email);
     btnDisabled();
-  }
-
-  if (validate()) {
+  } else if (validate()) {
     btnActive();
   }
 }
 
-function checkPassword() {
-  const errMsg1 = '비밀번호를 입력해주세요';
-  const errMsg2 = '비밀번호를 8자 이상 입력해주세요';
+function checkPassword(event) {
+  const password = event.target;
   if (!password.value) {
-    showError(errMsg1, password);
+    const errMsg = '비밀번호를 입력해주세요';
+    showError(errMsg, password);
     btnDisabled();
   } else if (password.value.length < 8) {
-    showError(errMsg2, password);
+    const errMsg = '비밀번호를 8자 이상 입력해주세요';
+    showError(errMsg, password);
     btnDisabled();
-  }
-
-  if (validate()) {
+  } else if (validate()) {
     btnActive();
   }
 }
 
-function togglePwd() {
+function togglePwd(event) {
+  const toggle = event.target;
+  const password = event.target.parentElement.firstElementChild;
   if (password.type === 'password') {
     password.type = 'text';
-    togglePwdImg.src = 'images/visible.svg';
+    toggle.src = 'images/visible.svg';
   } else {
     password.type = 'password';
-    togglePwdImg.src = 'images/non-visible.svg';
+    toggle.src = 'images/non-visible.svg';
   }
 }
+
+email.addEventListener('focusout', checkEmail);
+email.addEventListener('focusin', cleanError);
+
+password.addEventListener('focusout', checkPassword);
+password.addEventListener('focusin', cleanError);
 
 togglePwdImg.addEventListener('click', togglePwd);
 
-email.addEventListener('focusout', checkEmail);
-email.addEventListener('focusin', () => {
-  cleanError(email);
-});
+if (!validate()) {
+  btnDisabled();
+}
 
-password.addEventListener('focusout', checkPassword);
-password.addEventListener('focusin', () => {
-  cleanError(password);
-});
+export {
+  pattern,
+  email,
+  password,
+  authBtn,
+  togglePwdImg,
+  validate,
+  showError,
+  cleanError,
+  btnDisabled,
+  btnActive,
+  checkEmail,
+  checkPassword,
+  togglePwd,
+};

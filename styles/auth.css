@@ -56,6 +56,10 @@
   top: 19px;
 }
 
+.auth-wrap .pwd-toggle:hover {
+  cursor: pointer;
+}
+
 .auth-wrap .auth-btn {
   display: block;
   height: 56px;
